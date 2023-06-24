@@ -1,6 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-import flatpickr from "flatpickr";
+import Notiflix from 'notiflix';
 
 const text = document.querySelector('#datetime-picker');
 const timerHtml = document.querySelector('.time');
@@ -66,9 +66,9 @@ const days = document.querySelector('span[data-days]');
                 timerHtml.computedStyleMap.color = 'tomato';
             }
          } else {
-            flatpickr.Notify.success ('Countdown finished');
-            tinmerHtml.style.color = 'black';
-            clearInterval(timer);
+          Notiflix.Notify.success('Countdown finished');
+          timerHtml.style.color = 'black';
+          clearInterval(timer);
          }
     }, 1000);
   });
